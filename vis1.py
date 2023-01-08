@@ -18,3 +18,12 @@ print(len(rows))
 
 cur.close()
 conn.close()
+
+t = [a[0] for a in rows]
+ax = [a[1] for a in rows]
+ay = [a[2] for a in rows]
+az = [a[3] for a in rows]
+plt.plot(t, ax)
+plt.plot(t, ay)
+plt.plot(t, az)
+plt.show()

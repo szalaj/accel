@@ -19,11 +19,24 @@ print(len(rows))
 cur.close()
 conn.close()
 
-t = [a[0] for a in rows]
+x = [0]
+ 
+T = [a[0] for a in rows]
+
+tit = []
+
+for i in range(1,len(T)):
+    tprev = T[i-1]
+    ti = T[i]
+    dt = (ti - tprev).total_seconds()
+    tit.append(dt)
+
+print(sum(tit))
+
 ax = [a[1] for a in rows]
 ay = [a[2] for a in rows]
 az = [a[3] for a in rows]
-plt.plot(t, ax)
-plt.plot(t, ay)
-plt.plot(t, az)
+plt.plot(T, ax)
+plt.plot(T, ay)
+plt.plot(T, az)
 plt.show()

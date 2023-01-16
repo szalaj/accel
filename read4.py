@@ -6,7 +6,7 @@ import datetime
 import psycopg2
 
 
-UDP_IP = "192.168.0.3"
+UDP_IP = "192.168.0.5"
 UDP_PORT = 5005
 
 print('start')
